@@ -133,3 +133,11 @@ ion-icon:hover{
 #footer a{
     text-decoration: underline;
 }
+@media (min-width: 720px) {
+    :root{
+        --bg-url: url(./asset/background-desktop-drak-mode.jpg);
+    }
+    .light{
+        --bg-url: url(./asset/background-desktop-light-mode.jpg);
+    }
+}
