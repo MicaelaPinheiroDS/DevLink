@@ -64,7 +64,7 @@ body {
     margin: .4rem auto;
 }
 .light #switchButton{
-    right: 0;
+    animation: slide-in .4s forwards;
 }
 #switchButton{
     background: var(--switch-bg-url) white no-repeat center;
@@ -74,8 +74,9 @@ body {
     border-radius: 50%;
     border: .8rem solid transparent;
     position: absolute;
-    left: inherit;
+    left: 0;
     z-index: 1;
+    animation: slide-out .4s;
 }
 #switchTrack{
     width: 6.4rem;
@@ -139,5 +140,19 @@ ion-icon:hover{
     }
     .light{
         --bg-url: url(./asset/background-desktop-light-mode.jpg);
+    }
+}
+@keyframes slide-in {
+    from {
+        left: 0;
+    } to {
+        left: 50%;
+    }
+}
+@keyframes slide-out {
+    from {
+        left: 50%;
+    } to {
+        left: 0;
     }
 }
