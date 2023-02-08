@@ -35,7 +35,8 @@ body {
     background: var(--bg-url) no-repeat top center/cover;
 }
 #app{
-    width: 36rem;
+    width: 100%;
+    max-width: 58.8rem;
     margin: 5.6rem auto 3.2rem;
 }
 #profile, #containerSwitchMode, #myProjetList, #socialLink, #footer{
