@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root{
+        /*dark mode*/
+        --stroke-color-drak: rgba(255, 255, 255, 0.5);
+        --surface-color-drak: rgba(255, 255, 255, 0.1);
+        --surface-color-hover-drak: rgba(255, 255, 255, 0.05);
+        --highlight-color-drak: rgba(255, 255, 255, 0.2);
+        
+        /*light mode*/
+        --stroke-color: rgba(0, 0, 0, 0.5);
+        --surface-color: rgba(0, 0, 0, 0.05);
+        --surface-color-hover: rgba(0, 0, 0, 0.02);
+        --highlight-color: rgba(0, 0, 0, 0.1);
+    }
+}
+:root{
+    font-family: 'Inter', sans-serif;
+    --text-color: white;
+    --bg-url: url(./assets/img/background-mobile-drak-mode.jpg);
+    
+}
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/img/background-mobile-light-mode.jpg)
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    color: var(--text-color);
+}
+
+@media (min-width: 720px) and (min-height:1250px) {
+    :root{
+        --bg-url: url(./assets/img/background-desktop-drak-mode.jpg);
+    }
+    .light{
+        --bg-url: url(./assets/img/background-desktop-light-mode.jpg);
+    }
+}
